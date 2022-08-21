@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title> المدونة</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    @font-face {
+      font-family: "droid";
+      src: url('fonts/DroidKufi-Regular.ttf');
+
+    }
+
+    body {
+      font-family: droid;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <!-- <link href="../blog/blog.rtl.css" rel="stylesheet"> -->
+</head>
+
+<body class="row col-md-12 col-sm-12 col-lg-7 d-block mx-auto">
+
+  <div class="container-fluid">
+    <div class="row align-items-end bg-primary">
+      <div class="col">
+        <div class="row flex-nowrap justify-content-between align-items-end">
+          <div class="col-12 links-top  m-1 border-0  links-topbar">
+            <a class="link-secondary  p-2 border-0 " href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="link-secondary p-2 border-0 " href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a class="link-secondary p-2 border-0 " href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row flex-nowrap justify-content-end ">
+          <div class="col-12 links-top text-end  m-1 border-0  links-topbar">
+            <span class="text-white p-2 border-0"> 200:2000 <i class="fa-solid fa-clock"></i></span>
+            <a class="link-secondary text-decoration-none p-1 border-0 " href="#"><i class="fa-solid fa-user"></i></a>
+            <a class="link-secondary text-decoration-none p-1 border-0" href="#">
+              En
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <nav class="navbar navbar-expand-md navbar-light text-white  border-bottom border-primary" id="navbar_top">
+      <div class="container-fluid">
+  
+        <div class="row">
+          <div class="col-md-3">
+            <a class="navbar-brand" href="#">
+              <img src="images/LOGO.jpg" class="img-fluid col-md-11 pt-2" alt="">
+            </a>
+          </div>
+          <div class="col-md-9">
+            <div class="col-md-12">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+                <ul class="navbar-nav me-auto">
+  
+                  <li class="nav-item">
+                    <a class="nav-link  rounded-2 btn-outline-primary" aria-current="page" href="#">الرئيسية</a>
+                  </li>
+  
+                  <li class="nav-item">
+                    <a class="nav-link rounded-2 btn-outline-primary" href="matches.html"> المباريات</a>
+                  </li>
+  
+                  <li class="nav-item">
+                    <a class="nav-link  rounded-2 btn-outline-primary" href="details.html">الأفرقة</a>
+                  </li>
+  
+                  <li class="nav-item">
+                    <a class="nav-link rounded-2 btn-outline-primary" href="details.html">الدوريات</a>
+                  </li>
+  
+                </ul>
+                <div class="input-group ">
+                  <span class="input-group-text" id="button-addon1"><i class="fa fa-search text-primary"></i></span>
+                  <input type="text" class="form-control" placeholder="search" aria-label="search"
+                    aria-describedby="basic-addon1">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </nav>
+  
+  <div class="tab-content" id="pills-tabContent">
+    <ul class="nav-pills mt-2">
+      <div class="row ">
+        <div class="col-md-8 text-end">
+          <li class="nav-item badge">
+            <a href="#" class="nav-link">مبارايات الأمس </a>
+          </li>
+          <li class="nav-item badge">
+            <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" href="#"
+              role="tab" aria-controls="pills-home" aria-selected="true">مباريات اليوم</a>
+          </li>
+          <li class="nav-item badge">
+            <a href="#" class="nav-link">مبارايات الغد</a>
+          </li>
+        </div>
+        <div class="col-md-4 text-end">
+          <li class="nav-item badge">
+            <a class="nav-link active btn-block text-end" href="matches.html">جميع المبارايات</a>
+          </li>
+        </div>
+      </div>
+    </ul>
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+      <div class="slide-container swiper ">
+        <div class="slide-content">
+          <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+              <div class="text-center">
+                <div class="row pt-1 justify-content-center">
+                  <span class="text-dark pt-1 pb-2 fw-bold" style="font-size: 12px;"> كأس محمد السادس للأندية
+                    الأبطال
+                  </span>
+                  <div class="col-4" style="padding-right: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-end text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="col-12">
+                      <span class="text-end text-dark pt-1 fw-bold" style="font-size: 12px;">
+                        <span class="badge bg-dark p-1">12</span> 9
+                      </span> -
+                      <span class="text-start text-dark pt-2 fw-bold" style="font-size: 12px;">
+                        4 <span class="badge bg-dark p-1">12</span>
+                      </span>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <span class="border-2 rounded-2 text-white bg-danger" style="font-size: 12px; padding: 0 10px;">لم
+                        تبدأ</span>
+                    </div>
+                    <span class="text-secondary text-center">20:20</span>
+                  </div>
+                  <div class="col-4" style="padding-left: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-start text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="text-center">
+  
+                <div class="row pt-1 justify-content-center">
+                  <span class="text-dark pt-1 pb-2 fw-bold" style="font-size: 12px;"> كأس محمد السادس للأندية
+                    الأبطال
+                  </span>
+                  <div class="col-4" style="padding-right: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-end text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="col-12">
+                      <span class="text-end text-dark pt-1 fw-bold" style="font-size: 12px;">
+                        <span class="badge bg-dark p-1">4</span> 9
+                      </span> -
+                      <span class="text-start text-dark pt-2 fw-bold" style="font-size: 12px;">
+                        4 <span class="badge bg-dark p-1">4</span>
+                      </span>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <span class="border-2 rounded-2 text-white bg-danger" style="font-size: 12px; padding: 0 10px;">لم
+                        تبدأ</span>
+                    </div>
+                    <span class="text-secondary text-center">20:20</span>
+                  </div>
+                  <div class="col-4" style="padding-left: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-start text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="text-center">
+  
+                <div class="row pt-1 justify-content-center">
+                  <span class="text-dark pt-1 pb-2 fw-bold" style="font-size: 12px;"> كأس محمد السادس للأندية
+                    الأبطال
+                  </span>
+                  <div class="col-4" style="padding-right: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-end text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="col-12">
+                      <span class="text-end text-dark pt-1 fw-bold" style="font-size: 12px;">
+                        <span class="badge bg-dark p-1">4</span> 9
+                      </span> -
+                      <span class="text-start text-dark pt-2 fw-bold" style="font-size: 12px;">
+                        4 <span class="badge bg-dark p-1">4</span>
+                      </span>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <span class="border-2 rounded-2 text-white bg-danger" style="font-size: 12px; padding: 0 10px;">لم
+                        تبدأ</span>
+                    </div>
+                    <span class="text-secondary text-center">20:20</span>
+                  </div>
+                  <div class="col-4" style="padding-left: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-start text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="text-center">
+  
+                <div class="row pt-1 justify-content-center">
+                  <span class="text-dark pt-1 pb-2 fw-bold" style="font-size: 12px;"> كأس محمد السادس للأندية
+                    الأبطال
+                  </span>
+                  <div class="col-4" style="padding-right: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-end text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="col-12">
+                      <span class="text-end text-dark pt-1 fw-bold" style="font-size: 12px;">
+                        <span class="badge bg-dark p-1">4</span> 9
+                      </span> -
+                      <span class="text-start text-dark pt-2 fw-bold" style="font-size: 12px;">
+                        4 <span class="badge bg-dark p-1">4</span>
+                      </span>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <span class="border-2 rounded-2 text-white bg-danger" style="font-size: 12px; padding: 0 10px;">لم
+                        تبدأ</span>
+                    </div>
+                    <span class="text-secondary text-center">20:20</span>
+                  </div>
+                  <div class="col-4" style="padding-left: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-start text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="text-center">
+  
+                <div class="row pt-1 justify-content-center">
+                  <span class="text-dark pt-1 pb-2 fw-bold" style="font-size: 12px;"> كأس محمد السادس للأندية
+                    الأبطال
+                  </span>
+                  <div class="col-4" style="padding-right: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-end text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="col-12">
+                      <span class="text-end text-dark pt-1 fw-bold" style="font-size: 12px;">
+                        <span class="badge bg-dark p-1">4</span> 9
+                      </span> -
+                      <span class="text-start text-dark pt-2 fw-bold" style="font-size: 12px;">
+                        4 <span class="badge bg-dark p-1">4</span>
+                      </span>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <span class="border-2 rounded-2 text-white bg-danger" style="font-size: 12px; padding: 0 10px;">لم
+                        تبدأ</span>
+                    </div>
+                    <span class="text-secondary text-center">20:20</span>
+                  </div>
+                  <div class="col-4" style="padding-left: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-start text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="text-center">
+  
+                <div class="row pt-1 justify-content-center">
+                  <span class="text-dark pt-1 pb-2 fw-bold" style="font-size: 12px;"> كأس محمد السادس للأندية
+                    الأبطال
+                  </span>
+                  <div class="col-4" style="padding-right: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-end text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="col-12">
+                      <span class="text-end text-dark pt-1 fw-bold" style="font-size: 12px;">
+                        <span class="badge bg-dark p-1">4</span> 9
+                      </span> -
+                      <span class="text-start text-dark pt-2 fw-bold" style="font-size: 12px;">
+                        4 <span class="badge bg-dark p-1">4</span>
+                      </span>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <span class="border-2 rounded-2 text-white bg-danger" style="font-size: 12px; padding: 0 10px;">لم
+                        تبدأ</span>
+                    </div>
+                    <span class="text-secondary text-center">20:20</span>
+                  </div>
+                  <div class="col-4" style="padding-left: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-start text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="text-center">
+  
+                <div class="row pt-1 justify-content-center">
+                  <span class="text-dark pt-1 pb-2 fw-bold" style="font-size: 12px;"> كأس محمد السادس للأندية
+                    الأبطال
+                  </span>
+                  <div class="col-4" style="padding-right: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-end text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="col-12">
+                      <span class="text-end text-dark pt-1 fw-bold" style="font-size: 12px;">
+                        <span class="badge bg-dark p-1">4</span> 9
+                      </span> -
+                      <span class="text-start text-dark pt-2 fw-bold" style="font-size: 12px;">
+                        4 <span class="badge bg-dark p-1">4</span>
+                      </span>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <span class="border-2 rounded-2 text-white bg-danger" style="font-size: 12px; padding: 0 10px;">لم
+                        تبدأ</span>
+                    </div>
+                    <span class="text-secondary text-center">20:20</span>
+                  </div>
+                  <div class="col-4" style="padding-left: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-start text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="text-center">
+  
+                <div class="row pt-1 justify-content-center">
+                  <span class="text-dark pt-1 pb-2 fw-bold" style="font-size: 12px;"> كأس محمد السادس للأندية
+                    الأبطال
+                  </span>
+                  <div class="col-4" style="padding-right: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-end text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="col-12">
+                      <span class="text-end text-dark pt-1 fw-bold" style="font-size: 12px;">
+                        <span class="badge bg-dark p-1">4</span> 9
+                      </span> -
+                      <span class="text-start text-dark pt-2 fw-bold" style="font-size: 12px;">
+                        4 <span class="badge bg-dark p-1">4</span>
+                      </span>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <span class="border-2 rounded-2 text-white bg-danger" style="font-size: 12px; padding: 0 10px;">لم
+                        تبدأ</span>
+                    </div>
+                    <span class="text-secondary text-center">20:20</span>
+                  </div>
+                  <div class="col-4" style="padding-left: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-start text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="text-center">
+  
+                <div class="row pt-1 justify-content-center">
+                  <span class="text-dark pt-1 pb-2 fw-bold" style="font-size: 12px;"> كأس محمد السادس للأندية
+                    الأبطال
+                  </span>
+                  <div class="col-4" style="padding-right: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-end text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="col-12">
+                      <span class="text-end text-dark pt-1 fw-bold" style="font-size: 12px;">
+                        <span class="badge bg-dark p-1">4</span> 9
+                      </span> -
+                      <span class="text-start text-dark pt-2 fw-bold" style="font-size: 12px;">
+                        4 <span class="badge bg-dark p-1">4</span>
+                      </span>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <span class="border-2 rounded-2 text-white bg-danger" style="font-size: 12px; padding: 0 10px;">لم
+                        تبدأ</span>
+                    </div>
+                    <span class="text-secondary text-center">20:20</span>
+                  </div>
+                  <div class="col-4" style="padding-left: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-start text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="text-center">
+  
+                <div class="row pt-1 justify-content-center">
+                  <span class="text-dark pt-1 pb-2 fw-bold" style="font-size: 12px;"> كأس محمد السادس للأندية
+                    الأبطال
+                  </span>
+                  <div class="col-4" style="padding-right: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-end text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="col-12">
+                      <span class="text-end text-dark pt-1 fw-bold" style="font-size: 12px;">
+                        <span class="badge bg-dark p-1">4</span> 9
+                      </span> -
+                      <span class="text-start text-dark pt-2 fw-bold" style="font-size: 12px;">
+                        4 <span class="badge bg-dark p-1">4</span>
+                      </span>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <span class="border-2 rounded-2 text-white bg-danger" style="font-size: 12px; padding: 0 10px;">لم
+                        تبدأ</span>
+                    </div>
+                    <span class="text-secondary text-center">20:20</span>
+                  </div>
+                  <div class="col-4" style="padding-left: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-start text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="text-center">
+  
+                <div class="row pt-1 justify-content-center">
+                  <span class="text-dark pt-1 pb-2 fw-bold" style="font-size: 12px;"> كأس محمد السادس للأندية
+                    الأبطال
+                  </span>
+                  <div class="col-4" style="padding-right: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-end text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="col-12">
+                      <span class="text-end text-dark pt-1 fw-bold" style="font-size: 12px;">
+                        <span class="badge bg-dark p-1">4</span> 9
+                      </span> -
+                      <span class="text-start text-dark pt-2 fw-bold" style="font-size: 12px;">
+                        4 <span class="badge bg-dark p-1">4</span>
+                      </span>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <span class="border-2 rounded-2 text-white bg-danger" style="font-size: 12px; padding: 0 10px;">لم
+                        تبدأ</span>
+                    </div>
+                    <span class="text-secondary text-center">20:20</span>
+                  </div>
+                  <div class="col-4" style="padding-left: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-start text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="text-center">
+  
+                <div class="row pt-1 justify-content-center">
+                  <span class="text-dark pt-1 pb-2 fw-bold" style="font-size: 12px;"> كأس محمد السادس للأندية
+                    الأبطال
+                  </span>
+                  <div class="col-4" style="padding-right: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-end text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="col-12">
+                      <span class="text-end text-dark pt-1 fw-bold" style="font-size: 12px;">
+                        <span class="badge bg-dark p-1">4</span> 9
+                      </span> -
+                      <span class="text-start text-dark pt-2 fw-bold" style="font-size: 12px;">
+                        4 <span class="badge bg-dark p-1">4</span>
+                      </span>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <span class="border-2 rounded-2 text-white bg-danger" style="font-size: 12px; padding: 0 10px;">لم
+                        تبدأ</span>
+                    </div>
+                    <span class="text-secondary text-center">20:20</span>
+                  </div>
+                  <div class="col-4" style="padding-left: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-start text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="text-center">
+  
+                <div class="row pt-1 justify-content-center">
+                  <span class="text-dark pt-1 pb-2 fw-bold" style="font-size: 12px;"> كأس محمد السادس للأندية
+                    الأبطال
+                  </span>
+                  <div class="col-4" style="padding-right: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-end text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="col-12">
+                      <span class="text-end text-dark pt-1 fw-bold" style="font-size: 12px;">
+                        <span class="badge bg-dark p-1">4</span> 9
+                      </span> -
+                      <span class="text-start text-dark pt-2 fw-bold" style="font-size: 12px;">
+                        4 <span class="badge bg-dark p-1">4</span>
+                      </span>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <span class="border-2 rounded-2 text-white bg-danger" style="font-size: 12px; padding: 0 10px;">لم
+                        تبدأ</span>
+                    </div>
+                    <span class="text-secondary text-center">20:20</span>
+                  </div>
+                  <div class="col-4" style="padding-left: 25px;">
+                    <div class="col-12">
+                      <img src="images/1.webp" width="30px" class="m-1 mt-1">
+                    </div>
+                    <div class="col-12">
+                      <span class="text-start text-dark fw-bold" style="font-size: 10px;"> باريس سان جيرمان </span>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next swiper-navBtn" style="position: absolute;top:0"></div>
+        <div class="swiper-button-prev swiper-navBtn" style="position: absolute;top:0"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <section id="details" class="details">
+    <div class="container-fluid  mt-3">
+      <div class="row pb-2">
+        <div class="col-md-9 ">
+
+          <div class="imgfirsty">
+            <img src="images/IMG_4813.jpg" alt="" width="100%" />
+            <p class="movingspan"><span>دوري مصر </span></p>
+            <p class="movingparagraph">
+              القتال لاخر دقيقة .... ما هو سر قناع لاعبي ريال مدريد القتال لاخر
+              دقيقة .... ما هو سر قناع لاعبي ريال مدريد القتال لاخر دقيقة .... ما
+              هو سر قناع لاعبي ريال مدريد
+            </p>
+          </div>
+
+          <div class="newsdetails">
+            <div class="firstnew">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div class="sec1-img d-flex mt-5 border border-secondary mb-2 justify-content-start">
+                    <img src="images/IMG_4813.jpg" alt="" width="250px" height="150px" />
+                    <div class="text-more moving-texxt">
+                      <h5>الدوري الاسباني</h5>
+                      <p>القتال لاخر دقيقة .... ما هو سر قناع لاعبي ريال مدريد</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div class="sec1-img d-flex mt-2 border border-secondary mb-2 justify-content-start">
+                    <img src="images/IMG_4813.jpg" alt="" width="250px" height="150px" />
+                    <div class="text-more moving-texxt">
+                      <h5>الدوري الاسباني</h5>
+                      <p>القتال لاخر دقيقة .... ما هو سر قناع لاعبي ريال مدريد</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div class="sec1-img d-flex mt-2 border border-secondary mb-2 justify-content-start">
+                    <img src="images/IMG_4813.jpg" alt="" width="250px" height="150px" />
+                    <div class="text-more moving-texxt">
+                      <h5>الدوري الاسباني</h5>
+                      <p>القتال لاخر دقيقة .... ما هو سر قناع لاعبي ريال مدريد</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="col-md-3">
+            <div class="position-sticky" style="top: 2rem;">
+              <div class="mb-2">
+                <img src="images/2fcf74de-cfaa-4467-a3e3-88c730f70b37.jfif" class="img-fluid w-100" width="100%" alt="...">
+              </div>
+          
+              <div class="p-4 mb-2 border border-primary rounded">
+                <h4 class="sidebar-h4-s-2 p-3 rounded"> اشترك وتوقع </h4>
+                <div class="col-12">
+                  <form action="">
+          
+          
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        الاهلي
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked="">
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        الزمالك
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked="">
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        تعادل
+                      </label>
+                    </div>
+                    <div class="row">
+                      <input type="email" placeholder="ادخل بريدك الالكتروني" class="form-control  mt-2 ">
+                      <button class="btn btn-block btn-primary  mt-2"> اشتراك</button>
+                    </div>
+          
+                  </form>
+                </div>
+              </div>
+          
+              <div class="p-4 mb-2 sidebar-sec-1 rounded">
+                <h4 class="sidebar-h4 rounded p-1">حول</h4>
+                <p class="mb-0">أقبلت، فأقبلت معك الحياة بجميع صنوفها وألوانها: فالنبات ينبت، والأشجار تورق وتزهر، والهرة
+                  تموء، والقمري يسجع، والغنم يثغو، والبقر يخور، وكل أليف يدعو أليفه. كل شيء يشعر بالحياة وينسي هموم
+                  الحياة،
+                  ولا يذكر إلا سعادة الحياة، فإن كان الزمان جسدا فأنت روحه، وإن كان عمرا فأنت شبابه.</p>
+              </div>
+          
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </section>
+  <footer class="py-1 mt-2 text-muted border-top bg-light">
+    <div class="row justify-content-between">
+      <div class="col-6 col-md text-center p-3">
+        <img class="img-fluid" src="images/LOGO.jpg" alt="">
+        <div class="col-12 pt-4">
+          <span> جميع الحقوق محفوظة </span>
+        </div>
+      </div>
+      <div class="col-6 col-md text-end p-4">
+        <div class="col-12" style="font-size: 12px;">
+          <a class="text-decoration-none btn-outline-primary p-1 rounded-2 " href="index.html"> الرئيسية </a>
+          <a class="text-decoration-none btn-outline-primary p-1 rounded-2 " href="matches.html"> جدول المبارايات </a>
+          <a class="text-decoration-none btn-outline-primary p-1 rounded-2 " href="news.html"> الأخبار </a>
+          <a class="text-decoration-none btn-outline-primary p-1 rounded-2 " href="matches.html"> مباريات اليوم </a>
+        </div>
+        <hr>
+        <p style="font-size: 12px;">
+          <a class="text-decoration-none btn-outline-primary p-1 rounded-2" href="privacypolicy.html"> سياسة الاستخدام
+          </a>
+          <a class="text-decoration-none btn-outline-primary p-1 rounded-2" href="privacypolicy.html"> الأحكام والشروط
+          </a>
+        </p>
+  
+  
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Swiper JS -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+    integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

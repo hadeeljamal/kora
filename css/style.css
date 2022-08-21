@@ -1,0 +1,679 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.row {
+  --bs-gutter-x: 0.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-left: calc(var(--bs-gutter-x) * -.5);
+  margin-right: calc(var(--bs-gutter-x) * -.5);
+}
+
+
+img {
+  border-radius: 5%;
+}
+
+
+nav ul .nav-item a:hover {
+  color: #fff;
+  background-color: #002078;
+}
+
+/* li a{
+  font-size: 13px;
+} */
+
+.slide-container {
+  max-width: 1120px;
+  width: 100%;
+  padding: 0px 0;
+
+}
+
+.slide-content {
+  margin: 0 25px;
+  padding: 0 0 35px 0;
+}
+
+.slide-content1 {
+  margin: 0 25px;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070F4;
+  border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #4070F4;
+}
+
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+
+
+.button {
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #4070F4;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #265DF2;
+}
+
+.swiper-navBtn {
+  color: #6E93f7;
+  transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+  color: #4070F4;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 35px;
+}
+
+.swiper-button-next {
+  right: 0;
+
+}
+
+.swiper-button-prev {
+  left: 0;
+ 
+}
+
+ul {
+  padding: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  line-height: 13px;
+  font-size: 10px;
+  color: #fff;
+  opacity: 1;
+  background: #638cff;
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background-color: #0b2f8f;
+  font-size: 11px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 18%;
+}
+
+.button:hover {
+  background: #265DF2;
+}
+
+.swiper-navBtn {
+  color: #ffffff;
+  background-color: #0277bd;
+  transition: color 0.3s ease;
+  height: 100%;
+}
+
+.swiper-navBtn:hover {
+  opacity: .6;
+}
+
+.links-topbar .link-secondary {
+  border-radius: 10%;
+  color: #fff;
+}
+
+.links-topbar .link-secondary:hover {
+  background-color: #fff;
+  color: #0277bd;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.links a:hover {
+  color: #0277bd;
+}
+
+.links a::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 20px;
+  background-color: #ffff;
+  position: relative;
+  top: -50%;
+  left: -65px;
+}
+
+
+
+.imgfirsty {
+  margin-top: 20px;
+  position: relative;
+}
+
+.imgfirsty img {
+  height: 600px;
+}
+
+.imgfirsty .movingspan {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: aliceblue;
+}
+
+.imgfirsty .movingparagraph {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: aliceblue;
+}
+
+.imgfirsty .movingspan span {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+width: 100px;
+padding: 5px;
+}
+
+.sec1-img {
+  position: relative;
+}
+
+.moving-texxt {
+  margin: 20px;
+}
+
+
+.card-img-top {
+  display: block;
+  width: auto;
+  max-height: 100%;
+  margin: auto;
+}
+
+.card-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  background-color: rgb(44, 44, 44);
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+/* Matches */
+
+section {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.cd-gallery .mtchCntrContainer {
+  display: inline-block;
+  width: 100%;
+  float: right;
+  margin-top: 10px;
+}
+
+.cd-gallery .matchItem:last-child {
+  margin-bottom: 0;
+
+}
+
+.cd-gallery .matchItem .ttl {
+  background: #000;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.ttl {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  float: right;
+  direction: rtl;
+  text-align: right;
+  font-family: droidBold, Arial;
+  font-size: 19px;
+  color: #000;
+  background: #e8e8e8;
+  border-right: 4px solid #000;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.ttl h2,
+.ttl h3,
+.ttl h4 {
+  float: right;
+  display: inline-block;
+  line-height: 2.2;
+}
+
+.ttl h2 a,
+.ttl h3 a,
+.ttl h4 a {
+  display: block;
+}
+
+.ttl img {
+  float: right;
+  margin-left: 10px;
+  width: auto;
+  height: 34px;
+  margin-top: 3px;
+}
+
+.cd-gallery .matchItem .ttl .links {
+  float: left;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.cd-gallery .matchItem .ttl .more:last-child {
+  margin-left: 0;
+}
+
+.cd-gallery .matchItem .ttl .more {
+  display: inline-block;
+  padding: 10px 0;
+  width: auto;
+  height: 36px;
+  background: #0277bd;
+  padding: 0 10px;
+  text-align: left;
+  color: #fff;
+  font-family: droidLight, Arial;
+  font-size: 13px;
+  line-height: 2.9;
+  float: right;
+  margin-left: 10px;
+}
+
+.cd-gallery .matchItem .ttl .more span {
+  float: left;
+  margin-right: 10px;
+}
+
+.cd-gallery .matchItem .ttl .more .icon-more:before {
+  content: "h";
+  color: #fff;
+  font-size: 14px;
+  line-height: 2.8;
+}
+
+li,
+ul {
+  list-style: none outside none;
+  text-decoration: none;
+}
+
+.cd-gallery ul li {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  /* float: right; */
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 14px;
+  margin-bottom: 10px;
+  min-height: 170px;
+}
+
+
+.cd-gallery li .teamA {
+  padding-left: 40px;
+}
+
+.cd-gallery li .teamA,
+.cd-gallery li .teamB {
+  float: right;
+  width: calc((100% - 370px)/ 2);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.cd-gallery li .teamA img,
+.cd-gallery li .teamB img {
+  height: 50px;
+  width: auto;
+  border: none;
+  display: inline-block;
+}
+
+.cd-gallery li .teamA .teamName,
+.cd-gallery li .teamB .teamName {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding-top: 10px;
+  color: #0277bd;
+  font-family: droidBold, Arial;
+  font-size: 15px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.cd-gallery li .matchScorer {
+  display: inline-block;
+  float: right;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.cd-gallery li .resultDiv {
+  /* float: right; */
+  width: 110px;
+  height: 110px;
+  position: relative;
+}
+
+span.matchResult {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+
+.cd-gallery li.done .resultDiv .matchTime {
+  display: block;
+}
+
+.cd-gallery li .resultDiv .matchTime {
+  display: inline-block;
+  width: 100%;
+  font-family: Arial;
+  color: #000;
+  font-size: 32px;
+  text-align: center;
+}
+
+.cd-gallery li .resultDiv .matchStatus {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+
+}
+
+.cd-gallery li.done .resultDiv .matchStatus .status {
+  background: #000;
+}
+
+.cd-gallery li .resultDiv .matchStatus .status {
+  width: 50px;
+  margin: 0 calc((100% - 50px)/ 2);
+  height: 18px;
+  display: inline-block;
+  color: #fff;
+  font-family: droidLight, Arial;
+  font-size: 10px;
+  text-align: center;
+}
+
+.cd-gallery li .resultDiv .moreDtls {
+  display: inline-block;
+  width: 100%;
+  height: 24px;
+  background: #0277bd;
+  color: #fff;
+  font-family: droidLight, Arial;
+  text-align: center;
+  font-size: 13px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.cd-gallery li .teamB {
+  padding-right: 40px;
+}
+
+.cd-gallery li .teamA,
+.cd-gallery li .teamB {
+  float: right;
+  width: calc((100% - 370px)/ 2);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.cd-gallery li .teamA img,
+.cd-gallery li .teamB img {
+  height: 50px;
+  width: auto;
+  border: none;
+  display: inline-block;
+}
+
+
+
+.cd-gallery li .teamA .teamName,
+.cd-gallery li .teamB .teamName {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding-top: 10px;
+  color: #0277bd;
+  font-family: droidBold, Arial;
+  font-size: 15px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.cd-gallery li .matchScorer {
+  display: inline-block;
+  float: right;
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .cd-gallery li .resultDiv .result {
+    font-size: 20px;
+  }
+}
+
+footer {
+  position: relative;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.links a:hover {
+  color: #0277bd;
+}
+
+.links a::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 20px;
+  background-color: #ffff;
+  position: relative;
+  top: -50%;
+  left: -65px;
+}
+
+
+
+.part2-card {
+  border: 1px solid #0277bd;
+}
+
+.sidebar-sec-1 {
+  background-color: #109ccd;
+  color: #fff;
+  text-align: justify;
+}
+
+.sidebar-sec-1 p,
+label,
+::placeholder {
+  font-size: 13px;
+}
+
+::placeholder {
+  text-align: right;
+}
+
+.sec-title-berfore::before {
+  content: "";
+  height: 21px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  transform: translate(20px, 25%);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.fa-futbol {
+  position: absolute;
+  transform: translate(6px, -205%);
+  color: #002078;
+}
+
+.sidebar-h4 {
+  background-color: #fff;
+  color: #109ccd;
+  text-align: center;
+  font-size: 1.17em;
+}
+
+
+.sidebar-h4-s-2 {
+  background-color: #fff;
+  color: #109ccd;
+  text-align: center;
+  font-size: 1.17em;
+}
+
+.sidebar-h4-s-2::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #265DF2;
+  display: block;
+  margin: 5px;
+  font-size: 13px;
+}
+
+.page-link {
+  border: 1px solid #109ccd;
+  border-radius: 0;
+}
+
+.page-link:hover {
+  color: #fff;
+  background-color: #0277bd;
+}
+
+.dropdown-divider {
+  background-color: #002078;
+}
+
+.bg-card-color {
+  background-color: #109ccd;
+}
+
+.card-image-wrapper {
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  transition: all 1.5s ease;
+  width: 100%;
+}
+
+.card-image-wrapper:hover img {
+  transform: scale(1.5);
+
+}
+
+.btn-outline-light:hover {
+  color: #109ccd;
+  background-color: #fff;
+  border-radius: 0;
+}
+
+
+
+
+
+.links-footer:hover span.underline {
+  border-bottom: 1px solid #002078;
+
+}
+
+.badge-bef::before {
+  content: '';
+  width: 303.2%;
+  height: 1px;
+  background-color: #109ccd;
+  display: block;
+  position: absolute;
+  left: 0%;
+  top: -30%;
+}
+
+.offcanvas-body {
+  background-color: #fff;
+}
+
+a:hover {
+  color: #fff;
+}
